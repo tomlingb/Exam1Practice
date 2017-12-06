@@ -8,8 +8,8 @@ These problems illustrate concepts that previous problems have not emphasized:
   -- animation (Problem 0c)
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Geoffrey Tomlinson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -145,24 +145,32 @@ def problem0a(n):
       -- If the given integer is 246, this function returns False,
            since (2 + 4 + 6) is 12, which is NOT odd.
     """
-    # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
-    #          Tests have been written for you (above).
-    #
-    ####################################################################
-    # IMPORTANT:
-    #    **  For full credit you must appropriately
-    #    **  use (call) the   sum_of_digits   function
-    #    **  that is DEFINED ABOVE.
-    ####################################################################
-    #
-    # HINT:  To test whether a number  m   is even or odd,
-    #        compute m % 2, i.e., the REMAINDER from m // 2.
-    #        If that remainder is 0, the number is even.
-    #        If that remainder is 1, the number is odd.
-    #        Simply try a few examples to convince yourself of this.
-    #        ASK FOR HELP if you do not understand this hint.
-    # ------------------------------------------------------------------
+
+    number = sum_of_digits(n)
+    if number % 2 == 0:
+        return False
+    else:
+        return True
+
+
+        # ------------------------------------------------------------------
+        # DONE: 2. Implement and test this function.
+        #          Tests have been written for you (above).
+        #
+        ####################################################################
+        # IMPORTANT:
+        #    **  For full credit you must appropriately
+        #    **  use (call) the   sum_of_digits   function
+        #    **  that is DEFINED ABOVE.
+        ####################################################################
+        #
+        # HINT:  To test whether a number  m   is even or odd,
+        #        compute m % 2, i.e., the REMAINDER from m // 2.
+        #        If that remainder is 0, the number is even.
+        #        If that remainder is 1, the number is odd.
+        #        Simply try a few examples to convince yourself of this.
+        #        ASK FOR HELP if you do not understand this hint.
+        # ------------------------------------------------------------------
 
 
 def run_test_problem0b():
@@ -217,16 +225,21 @@ def problem0b(n):
       -- If n is 200, the correct answer is 46,
            since there are 46 primes between 2 and 200.
      """
-    # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
-    #          Tests have been written for you (above).
-    #
-    ####################################################################
-    # IMPORTANT:
-    #    **  For full credit you must appropriately
-    #    **  use (call) the   is_prime   function that is DEFINED ABOVE.
-    ####################################################################
-    # ------------------------------------------------------------------
+
+    number = is_prime(n)
+    if
+
+
+# ------------------------------------------------------------------
+# TODO: 3. Implement and test this function.
+#          Tests have been written for you (above).
+#
+####################################################################
+# IMPORTANT:
+#    **  For full credit you must appropriately
+#    **  use (call) the   is_prime   function that is DEFINED ABOVE.
+####################################################################
+# ------------------------------------------------------------------
 
 
 def run_test_problem0c():
