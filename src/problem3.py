@@ -182,6 +182,7 @@ def run_test_problem3b():
     print('Problem 3b')
     print('=================================')
     print()
+
     # Test 1 is ALREADY DONE (here).
     expected = 158
     answer = problem3b(4, rg.Point(100, 50))
@@ -233,8 +234,20 @@ def problem3b(m, point1):
         :type m:      int
         :type point1: rg.Point
     """
+
+    window = rg.RoseWindow(400, 650)
+
+    number = 0
+    for k in range(m):
+        point = rg.Point(point1.x, point1.y + 60 * k)
+        number1 = problem3a(window, point, 3 + 2 * k)
+        number = number + number1
+
+    window.close_on_mouse_click()
+    return number
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
