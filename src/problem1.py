@@ -2,8 +2,8 @@
 PRACTICE Test 1, problem 1.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Geoffrey Tomlinson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -124,6 +124,18 @@ def run_test_problem1a():
     # TO DO: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # ------------------------------------------------------------------
+
+    expected = -.7568
+    answer = problem1a(2, 2)
+    print()
+    print('Test 3 expected:', expected, '(approximately)')
+    print('         actual:', answer)
+
+    expected = 1.135
+    answer = problem1a(1, -2)
+    print()
+    print('Test 4 expected:', expected, '(approximately)')
+    print('         actual:', answer)
 
 
 def problem1a(m, n):
