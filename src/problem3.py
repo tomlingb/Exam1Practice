@@ -7,6 +7,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 import rosegraphics as rg
 
+
 ########################################################################
 # Students:
 #
@@ -148,8 +149,22 @@ def problem3a(window, point, n):
         :type point:  rg.Point
         :type n:      int
     """
+
+    number = 0
+    for k in range(n):
+        top = rg.Point(point.x + k * 20, point.y + k * 10)
+        bottom = rg.Point(top.x, top.y + 50)
+        line = rg.Line(top, bottom)
+        line.thickness = 1 + 2 * k
+        if line.thickness > 13:
+            line.thickness = 13
+        number = number + line.thickness
+        line.attach_to(window)
+        window.render()
+    return number
+
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -161,6 +176,12 @@ def problem3a(window, point, n):
 
 def run_test_problem3b():
     """ Tests the   problem3b   function. """
+
+    print()
+    print('=================================')
+    print('Problem 3b')
+    print('=================================')
+    print()
     # Test 1 is ALREADY DONE (here).
     expected = 158
     answer = problem3b(4, rg.Point(100, 50))
@@ -226,6 +247,7 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # ------------------------------------------------------------------
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
