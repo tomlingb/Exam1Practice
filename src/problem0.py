@@ -301,15 +301,26 @@ def problem0c(circle, n, window):
       :type n: int
       :type window: rg.RoseWindow
     """
-    # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
-    #          Tests have been written for you (above).
-    #
-    ####################################################################
-    # HINT:   render(0.5)
-    #   renders with a half-second pause after rendering.
-    ####################################################################
-    # ------------------------------------------------------------------
+
+    circle.attach_to(window)
+    window.render()
+    for k in range(n + 1):
+        center = rg.Point(circle.center.x + k * circle.radius * 2,
+                          circle.center.y)
+        circle1 = rg.Circle(center, circle.radius)
+        circle1.attach_to(window)
+        window.render(0.05)
+
+
+# ------------------------------------------------------------------
+# DONE: 4. Implement and test this function.
+#          Tests have been written for you (above).
+#
+####################################################################
+# HINT:   render(0.5)
+#   renders with a half-second pause after rendering.
+####################################################################
+# ------------------------------------------------------------------
 
 
 # ----------------------------------------------------------------------
