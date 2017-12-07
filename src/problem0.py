@@ -226,12 +226,15 @@ def problem0b(n):
            since there are 46 primes between 2 and 200.
      """
 
-    number = is_prime(n)
-    if
+    number = 0
+    for k in range(2, n + 1):
+        if is_prime(k) == True:
+            number = number + 1
+    return number
 
 
 # ------------------------------------------------------------------
-# TODO: 3. Implement and test this function.
+# DONE: 3. Implement and test this function.
 #          Tests have been written for you (above).
 #
 ####################################################################
