@@ -179,7 +179,7 @@ def problem1a(m, n):
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.
     # ------------------------------------------------------------------
@@ -192,6 +192,30 @@ def run_test_problem1b():
     print('--------------------------------------------------')
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
+
+    expected = 2
+    answer = problem1b(3, 2)
+    print()
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 13
+    answer = problem1b(5, 10)
+    print()
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 3
+    answer = problem1b(2, 3)
+    print()
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 42
+    answer = problem1b(10, 20)
+    print()
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
 
 
 def problem1b(m, f):
@@ -210,6 +234,13 @@ def problem1b(m, f):
       -- If m is 5 and f is 40, the correct answer is 44,
            since there are 44 primes between 5 and 200.
      """
+
+    number = 0
+    for k in range(m, f * m + 1):
+        if is_prime(k) == True:
+            number = number + 1
+    return number
+
     # ------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
