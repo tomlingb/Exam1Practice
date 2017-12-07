@@ -31,6 +31,7 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    run_test_problem2b()
     run_test_problem2a()
     run_test_problem2b()
 
@@ -191,15 +192,32 @@ def problem2b(rect, n, delta, win):
       :type delta:  int
       :type win:    rg.RoseWindow
     """
-    # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
-    #          Tests have been written for you (above).
-    # ------------------------------------------------------------------
-    # ------------------------------------------------------------------
-    # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
-    #    DIFFICULTY:      7
-    #    TIME ESTIMATE:   15 to 25 minutes.
-    # ------------------------------------------------------------------
+
+    rect.attach_to(win)
+    win.render()
+    topleft = rect.get_upper_left_corner()
+    bottomright = rect.get_lower_right_corner()
+    corner1 = rg.Point(topleft.x, topleft.y)
+    corner2 = rg.Point(bottomright.x, bottomright.y)
+    for k in range(n):
+        rect = rg.Rectangle(corner1, corner2)
+        rect.attach_to(win)
+        win.render()
+        corner1.x = corner1.x - delta
+        corner1.y = corner1.y - delta
+        corner2.x = corner2.x + delta
+        corner2.y = corner2.y + delta
+
+
+# ------------------------------------------------------------------
+# DONE: 3. Implement and test this function.
+#          Tests have been written for you (above).
+# ------------------------------------------------------------------
+# ------------------------------------------------------------------
+# DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
+#    DIFFICULTY:      7
+#    TIME ESTIMATE:   15 to 25 minutes.
+# ------------------------------------------------------------------
 
 
 # ----------------------------------------------------------------------
